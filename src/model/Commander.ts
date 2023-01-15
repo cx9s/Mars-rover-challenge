@@ -34,4 +34,10 @@ export class Commander {
     });
     return ret;
   }
+
+  clear(): void {
+    this.captain = "";
+    this.plateau = { x: 0, y: 0 };
+    this.roverTeam = [];
+  }
 }

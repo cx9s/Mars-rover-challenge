@@ -55,15 +55,13 @@ export class Rover extends Machine {
     return state;
   }
 
-  action(actions: Action[]): void {
+  action(actions: Action[]): number {
     let state = 0;
     for (const action of actions) {
       if (action === "L") {
         this.orientation = turnLeft(this.orientation);
-        console.log(`turn left to ${this.orientation}`);
       } else if (action === "R") {
         this.orientation = turnRight(this.orientation);
-        console.log(`turn left to ${this.orientation}`);
       } else if (action === "M") {
         const moveRet = this.moveForward();
         if (moveRet === 1 || moveRet === 2) {
@@ -72,11 +70,6 @@ export class Rover extends Machine {
         }
       }
     }
-    const states: string[] = [
-      `Done.`,
-      `The next position is occupied. I'm at (${this.position.x}, ${this.position.y}), face to ${this.orientation}`,
-      `The next position is out of map. I'm at (${this.position.x}, ${this.position.y}), face to ${this.orientation}`,
-    ];
-    console.log(states[state]);
+    return state;
   }
 }
