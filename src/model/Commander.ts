@@ -1,11 +1,20 @@
 import { Rover } from "./Rover";
 import { Position } from "./Position";
+import { Plateau } from "./Plateau";
 
 export class Commander {
+  captain: string;
+  plateau: Plateau;
   roverTeam: Rover[];
 
   constructor() {
+    this.captain = "";
+    this.plateau = { x: 0, y: 0 };
     this.roverTeam = [];
+  }
+
+  setMap(plateau: Plateau): void {
+    this.plateau = plateau;
   }
 
   dispatch(rover: Rover): void {

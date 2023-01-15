@@ -1,6 +1,5 @@
 import { Position } from "./Position";
 import { Orientation } from "./Orientation";
-import { type } from "os";
 
 const directions = ["L", "R"] as const;
 export type Direction = typeof directions[number];

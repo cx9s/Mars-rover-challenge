@@ -1,14 +1,15 @@
+import { Orientation } from "./Orientation";
 import { Position } from "./Position";
 
-export interface Plateau {
+interface Map {}
+export class Plateau implements Map {
   readonly x: number;
   readonly y: number;
-}
 
-export function createPlateau(x: number, y: number): Plateau {
-  const X_DEFAULT = 100,
-    Y_DEFAULT = 100;
-  x = x > 0 && x < X_DEFAULT ? x : X_DEFAULT;
-  y = y > 0 && y < Y_DEFAULT ? y : Y_DEFAULT;
-  return { x: x, y: y };
+  constructor(x: number, y: number) {
+    const X_DEFAULT = 100,
+      Y_DEFAULT = 100;
+    this.x = x > 0 && x < X_DEFAULT ? x : X_DEFAULT;
+    this.y = y > 0 && y < Y_DEFAULT ? y : Y_DEFAULT;
+  }
 }
