@@ -1,10 +1,9 @@
 import { clear, print, dialog } from "../../console";
-import { errorHandle, commander } from "../..";
-import { Rover } from "../model/Rover";
-import { Orientation } from "../model/Orientation";
+import { commander } from "../..";
 import { Action } from "../model/Instruction";
 import { chooseInstruction } from "./chooseInstruction";
 
+// dialog for instruting a rover
 export function executeRover(): void {
   clear(false);
   print("--------------------------");
@@ -23,6 +22,7 @@ export function checkMoveInst(actions: Action[]): boolean {
   );
 }
 
+// rover actions processor
 function moveRover(instruction: string): void {
   clear(true);
   let response = "";

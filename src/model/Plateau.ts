@@ -1,10 +1,8 @@
-import { Orientation } from "./Orientation";
-import { Position } from "./Position";
+import { Map } from "./Map";
 
-interface Map {}
 export class Plateau implements Map {
-  readonly x: number;
-  readonly y: number;
+  x: number;
+  y: number;
 
   constructor(x: number, y: number) {
     const X_DEFAULT = 100,

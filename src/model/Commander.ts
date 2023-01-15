@@ -1,6 +1,6 @@
-import { Rover } from "./Rover";
-import { Position } from "./Position";
 import { Plateau } from "./Plateau";
+import { Position } from "./Position";
+import { Rover } from "./Rover";
 
 export class Commander {
   captain: string;
@@ -35,7 +35,7 @@ export class Commander {
     return ret;
   }
 
-  clear(): void {
+  reset(): void {
     this.captain = "";
     this.plateau = { x: 0, y: 0 };
     this.roverTeam = [];

@@ -5,7 +5,7 @@ import { createRover } from "./createRover";
 import { executeRover } from "./executeRover";
 
 function endMarsExplore(): void {
-  commander.clear();
+  commander.reset();
   clear(false);
   print("***************************************");
   print("Mars exploration has completed.");
@@ -27,6 +27,7 @@ const descriptions = [
 ] as const;
 type Description = typeof descriptions[number];
 
+// list all instructions
 export function chooseInstruction(response?: string): void {
   clear(false);
   print("------------------------");
@@ -37,7 +38,7 @@ export function chooseInstruction(response?: string): void {
   descriptions.forEach((h, i) => print(`   ${i} - ${h}`));
   dialog("Which code number will you choose?", showInstruction);
 }
-
+// choose an instruction, code processor
 export function showInstruction(num: string): void {
   clear(true);
   const number = parseInt(num);

@@ -16,6 +16,7 @@ export class Rover extends Machine {
     this.camera = new Camera();
   }
 
+  // action "M" processor
   moveForward(): number {
     let state = 0;
     let nextPos: Position = { x: this.position.x, y: this.position.y };
@@ -55,6 +56,7 @@ export class Rover extends Machine {
     return state;
   }
 
+  // actions processor
   action(actions: Action[]): number {
     let state = 0;
     for (const action of actions) {

@@ -1,23 +1,10 @@
 import { clear, print, dialog } from "../../console";
-import { errorHandle, commander } from "../..";
+import { commander } from "../..";
 import { Rover } from "../model/Rover";
 import { Orientation } from "../model/Orientation";
-import { Action } from "../model/Instruction";
 import { chooseInstruction } from "./chooseInstruction";
 
-export function checkInitialInst(x: number, y: number, ori: string): boolean {
-  let ret = true;
-
-  if (!Number.isInteger(x) || !Number.isInteger(y)) ret = false;
-
-  if (x <= 0 || y <= 0 || x > commander.plateau.x || y > commander.plateau.y)
-    ret = false;
-
-  if (!["N", "E", "S", "W"].includes(ori)) ret = false;
-
-  return ret;
-}
-
+// dialog for creating a rover
 export function createRover(): void {
   clear(false);
   print("--------------------------");
@@ -31,6 +18,16 @@ export function createRover(): void {
   );
 }
 
+export function checkInitialInst(x: number, y: number, ori: string): boolean {
+  let ret = true;
+  if (!Number.isInteger(x) || !Number.isInteger(y)) ret = false;
+  if (x <= 0 || y <= 0 || x > commander.plateau.x || y > commander.plateau.y)
+    ret = false;
+  if (!["N", "E", "S", "W"].includes(ori)) ret = false;
+  return ret;
+}
+
+// initial and dispatch a rover
 function initialRover(instruction: string): void {
   clear(true);
   let response = "";

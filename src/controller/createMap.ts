@@ -1,13 +1,13 @@
 import { clear, print, dialog } from "../../console";
-import { errorHandle, commander } from "../..";
+import { commander } from "../..";
 import { Plateau } from "../model/Plateau";
-import { createRover } from "./createRover";
 import { chooseInstruction } from "./chooseInstruction";
 
 export function checkInstruction(x: number, y: number): boolean {
   return Number.isInteger(x) && Number.isInteger(y) && x > 0 && y > 0;
 }
 
+// dialog for creating a map
 export function createMap(): void {
   clear(false);
   print("--------------------------");
@@ -19,6 +19,7 @@ export function createMap(): void {
   );
 }
 
+// initial a map
 function initialMap(coordinates: string): void {
   clear(true);
   let response = "";
@@ -26,7 +27,6 @@ function initialMap(coordinates: string): void {
     const x = +coordinates.split(" ")[0];
     const y = +coordinates.split(" ")[1];
     if (checkInstruction(x, y)) {
-      //const commander = new Commander();
       const plateau: Plateau = new Plateau(x, y);
       commander.setMap(plateau);
       commander.roverTeam = [];

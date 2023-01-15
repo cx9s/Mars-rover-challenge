@@ -1,5 +1,3 @@
-import { Direction } from "./Instruction";
-
 const orientations = ["N", "E", "S", "W"] as const;
 export type Orientation = typeof orientations[number];
 
