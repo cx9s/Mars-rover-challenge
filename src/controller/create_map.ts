@@ -1,7 +1,7 @@
 import { clear, print, dialog } from "../../console";
 import { commander } from "../..";
 import { Plateau } from "../model/Plateau";
-import { chooseInstruction } from "./chooseInstruction";
+import { chooseInstruction } from "./choose_instruction";
 
 export function checkInstruction(x: number, y: number): boolean {
   return Number.isInteger(x) && Number.isInteger(y) && x > 0 && y > 0;

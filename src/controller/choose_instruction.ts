@@ -1,8 +1,8 @@
 import { clear, print, dialog } from "../../console";
 import { commander, marsExplore } from "../..";
-import { createMap } from "./createMap";
-import { createRover } from "./createRover";
-import { executeRover } from "./executeRover";
+import { createMap } from "./create_map";
+import { createRover } from "./create_rover";
+import { executeRover } from "./execute_rover";
 
 function endMarsExplore(): void {
   commander.reset();

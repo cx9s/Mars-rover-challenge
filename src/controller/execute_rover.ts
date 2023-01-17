@@ -1,7 +1,7 @@
 import { clear, print, dialog } from "../../console";
 import { commander } from "../..";
 import { Action } from "../model/Instruction";
-import { chooseInstruction } from "./chooseInstruction";
+import { chooseInstruction } from "./choose_instruction";
 
 // dialog for instruting a rover
 export function executeRover(): void {

@@ -1,5 +1,5 @@
 import { clear, print, dialog } from "./console";
-import { chooseInstruction } from "./src/controller/chooseInstruction";
+import { chooseInstruction } from "./src/controller/choose_instruction";
 import { Commander } from "./src/model/Commander";
 
 // game entrance function

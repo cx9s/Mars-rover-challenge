@@ -2,7 +2,7 @@ import { clear, print, dialog } from "../../console";
 import { commander } from "../..";
 import { Rover } from "../model/Rover";
 import { Orientation } from "../model/Orientation";
-import { chooseInstruction } from "./chooseInstruction";
+import { chooseInstruction } from "./choose_instruction";
 
 // dialog for creating a rover
 export function createRover(): void {
