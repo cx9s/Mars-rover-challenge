@@ -1,6 +1,6 @@
 # TypeScript project [Mars Rover Challenge]
 
-This project is a console game for Mars Rover Challenge project of Your Return to Tech 2022. It aims to practise Typescript and unit test, UML design as well.
+This project is a console game for Mars Rover Challenge project of Your Return to Tech 2022. It aims to practise Typescript and testing, UML design as well.
 
 ## Instructions
 
@@ -16,7 +16,7 @@ This project is a console game for Mars Rover Challenge project of Your Return t
 2. create or re-create a map to wait rovers' explorations. 're-create' will clear all rovers have been dispatched on old map.
 3. dispatch a rover on the map.
 4. instruct the rover move.
-5. rovers will prevent collision with others.
+5. rovers will prevent collision with others, and rovers will stop at the edge of plateau to prevent fall off.
 
 ## Further tasks
 
