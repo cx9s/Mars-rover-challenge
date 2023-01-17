@@ -1,10 +1,10 @@
 # TypeScript project [Mars Rover Challenge]
 
-This project is a console game.
+This project is a console game for Mars Rover Challenge project of Your Return to Tech 2022. It aims to practise Typescript and unit test, UML design as well.
 
 ## Instructions
 
-- Folk and clone down this repository to your computer;
+- Clone down this repository to your computer;
 
 - Navigate to the directory on your command line;
 
